@@ -18,7 +18,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.carrier=wifi-only
 
 PRODUCT_COPY_FILES := \
-    device/asus/grouper/init.grouper.rc:root/init.grouper.rc
+    device/asus/grouper/init.grouper.rc:root/init.grouper.rc \
+    device/asus/grouper/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 # the actual meat of the device-specific product definition
 $(call inherit-product, device/asus/grouper/device-common.mk)
@@ -67,7 +68,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.min.fling_velocity=8000 \
         ro.config.hw_fast_dormancy=1 \
         net.dns1=8.8.4.4 \
-        net.dns2=8.8.8.8 
+        net.dns2=8.8.8.8 \
+        ro.semc.sound_effects_enabled=true \
+        ro.semc.xloud.supported=true \
+        htc.audio.alc.enable=1 \
+        htc.audio.swalt.enable=1 \
+        htc.audio.swalt.mingain=14512 \
+        persist.service.xloud.enable=1 \
+        persist.service.enhance.enable=1 \
+        ro.semc.clearaudio.supported=true \
+        persist.service.clearaudio.enable=1 \
+        ro.sony.walkman.logger=1 \
+        ro.somc.clearphase.supported=true \
+        persist.service.clearphase.enable=1 
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/grouper/overlay
