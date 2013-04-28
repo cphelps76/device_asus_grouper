@@ -19,10 +19,11 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15 \
     tf.enable=y \
-    drm.service.enabled=true
+    ro.carrier=wifi-only \
+    wifi.interface=wlan0 \
+    drm.service.enabled=true \
+    wifi.supplicant_scan_interval=180
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

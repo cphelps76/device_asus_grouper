@@ -42,3 +42,5 @@ TARGET_KERNEL_CONFIG = elite_grouper_defconfig
 
 -include vendor/asus/grouper/BoardConfigVendor.mk
 include device/asus/grouper/BoardConfigCommon.mk
+
+TARGET_OTA_ASSERT_DEVICE := grouper
