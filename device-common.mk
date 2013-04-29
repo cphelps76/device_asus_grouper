@@ -17,13 +17,62 @@
 PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
-
+# DEMENTED build.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES := \
     tf.enable=y \
     ro.carrier=wifi-only \
     wifi.interface=wlan0 \
     drm.service.enabled=true \
-    wifi.supplicant_scan_interval=180
+    wifi.supplicant_scan_interval=180 \
+    windowsmgr.max_events_per_sec=350 \
+    ro.kernel.android.checkjni=0 \
+    ro.media.enc.jpeg.quality=100 \
+    ro.config.nocheckin=1 \
+    debug.performance.tuning=1 \
+    persist.service.swiqi.enable=1 \
+    video.accelerate.hw=1 \
+    ro.ril.enable.3g.prefix=1 \
+    ro.ril.hep=1 \
+    ro.ril.hsxpa=3 \
+    ro.ril.enable.dtm=1 \
+    ro.ril.gprsclass=12 \
+    ro.ril.hsdpa.category=8 \
+    ro.ril.enable.a53=1 \
+    ro.ril.hsupa.category=5 \
+    persist.sys.purgeable_assets=1 \
+    pm.sleep_mode=1 \
+    ro.home_app_adj=1 \
+    ro.ext4fs=1 \
+    persist.sys.use_dithering=0 \
+    ro.ril.disable.power.collapse=0 \
+    dalvik.vm.heapstartsize=128m \
+    dalvik.vm.heapgrowthlimit=320m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.heaputilization=0.05 \
+    dalvik.vm.heapidealfree=8388608 \
+    dalvik.vm.heapconcurrentstart=2097152 \
+    dalvik.vm.verify-bytecode=false \
+    ro.dalvik.vm.checkjni=0 \
+    dalvik.vm.dexopt-flags=v=n,o=v \
+    debug.composition.type=gpu \
+    ro.max.fling_velocity=15000 \
+    ro.min.fling_velocity=8000 \
+    ro.config.hw_fast_dormancy=1 \
+    net.dns1=8.8.4.4 \
+    net.dns2=8.8.8.8 \
+    ro.semc.sound_effects_enabled=true \
+    ro.semc.xloud.supported=true \
+    htc.audio.alc.enable=1 \
+    htc.audio.swalt.enable=1 \
+    htc.audio.swalt.mingain=14512 \
+    persist.service.xloud.enable=1 \
+    persist.service.enhance.enable=1 \
+    ro.semc.clearaudio.supported=true \
+    persist.service.clearaudio.enable=1 \
+    ro.sony.walkman.logger=1 \
+    ro.somc.clearphase.supported=true \
+    persist.service.clearphase.enable=1 
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
