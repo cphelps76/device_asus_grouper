@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := tvdpi
+PRODUCT_AAPT_CONFIG := normal large hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # DEMENTED build.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES := \
