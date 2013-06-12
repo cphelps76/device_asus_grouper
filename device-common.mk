@@ -75,6 +75,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.somc.clearphase.supported=true \
     persist.service.clearphase.enable=1
 
+# DEMENTED bootanimation...Credit JaeKar
+PRODUCT_COPY_FILES +=  \
+    vendor/DEMENTED/prebuilt/common/media/grouper/bootanimation.zip:system/media/bootanimation.zip
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
