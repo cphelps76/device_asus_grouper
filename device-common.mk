@@ -81,6 +81,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_COPY_FILES +=  \
     vendor/DEMENTED/prebuilt/common/media/grouper/bootanimation.zip:system/media/bootanimation.zip
 
+# Fix over clocking
+PRODUCT_COPY_FILES += \
+        device/asus/grouper/system/etc/init.d/03dementedcpuclock:system/etc/init.d/03dementedcpuclock
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
